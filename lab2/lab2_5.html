@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            /* background-color: #e3b2f3; */
+            background-color: rgba(21, 255, 0, 0.3);
+        }
+        form {
+            max-width: 400px;
+            margin-right: 0;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #047214;
+            color: white;
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            background-color: #0e371b;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма регистрации пользователя</h1>
+    <form action="#" method="post">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Введите e-mail" required>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+        <label>Пол</label>
+        <label><input type="radio" name="gender" value="male"> Мужчина</label>
+        <label><input type="radio" name="gender" value="female"> Женщина</label>
+
+        <label for="birthyear">Год рождения</label>
+        <input type="text" id="birthyear" name="birthyear" placeholder="1980 - й">
+
+        <label>Я знаю</label>
+        <label><input type="checkbox" name="language" value="russian" checked disabled> Русский</label>
+        <label><input type="checkbox" name="language" value="spanish"> Испанский</label>
+        <label><input type="checkbox" name="language" value="german"> Немецкий</label>
+        <label><input type="checkbox" name="language" value="english"> Английский</label>
+        <label><input type="checkbox" name="language" value="chinese"> Китайский</label>
+
+        <label for="about">Обо мне</label>
+        <textarea id="about" name="about" placeholder="Обо мне"></textarea>
+
+        <button type="submit">Готово</button>
+        <button type="reset">Очистить</button>
+    </form>
+</body>
+</html>
